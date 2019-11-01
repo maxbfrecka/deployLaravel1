@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+import VueAudio from 'vue-audio';
 
 window.Vue = require('vue');
 
@@ -31,5 +32,15 @@ const app = new Vue({
     el: '#app',
     data:{ 
         testmessage: 'testdata1',
-    }
+        audiofile1: 'audio/Wingnut.wav',
+        audio: true,
+    },
+    components: {
+        'vue-audio': VueAudio
+    },
+    methods: {
+        playAudio(){
+            console.log('Vue thang test');
+        },
+    },
 });

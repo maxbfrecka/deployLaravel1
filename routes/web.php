@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('main');
+    return view('music');
 });
 
 
@@ -21,7 +21,7 @@ Route::get('/music', function () {
 })->middleware('IPcheck');
 
 
-Route::get('/albumview', function () {
+Route::get('/music/wingnut', function () {
     return view('albumview');
 });
 

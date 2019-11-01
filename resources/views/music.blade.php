@@ -2,8 +2,7 @@
 
 @section('content')
 
-<div class="vueTest">
-        <h1>Music</h1>
+    <div class="vueTest">
 
         <albums-component></albums-component>
         

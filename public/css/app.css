@@ -11100,7 +11100,109 @@ a.text-dark:focus {
   }
 }
 
-.albumContainer {
-  background-color: yellow;
+.mainPageOuterContainer {
+  display: inline-block;
+  align-content: center;
+  text-align: center;
+  width: 85%;
+}
+
+.mainPageInnerContainer {
+  display: inline-block;
+  align-content: center;
+  text-align: center;
+  width: 85%;
+}
+
+#navbarTitleFont {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#navbarFont {
+  font-size: 30px;
+}
+
+.albumsContainer {
+  background-color: #ffffe2;
+  display: inline-block;
+}
+
+#albumTitle {
+  color: black;
+  font-size: 35px;
+  text-decoration: none;
+}
+
+#albumTitle:active {
+  color: black;
+  text-decoration: none;
+}
+
+#albumTitle:visited {
+  color: black;
+  text-decoration: none;
+}
+
+#albumTitle:hover {
+  color: black;
+  text-decoration: none;
+}
+
+#albumsAudioContainer {
+  display: block;
+  padding: 10px;
+  background-color: #b0bbf7;
+}
+
+#vueAudioThing {
+  padding: 3x;
+  display: inline-block;
+}
+
+#albumsBlurb {
+  display: block;
+  padding: 3px;
+  background-color: white;
+}
+
+#albumArtColumn {
+  background-color: #daec8a;
+}
+
+#albumsInfoColumn {
+  background-color: #9191b3;
+  display: inline-block;
+  text-align: left;
+}
+
+#albumsInfoContainer {
+  display: inline-block;
+  height: 100;
+}
+
+.priceColumn {
+  background-color: #154cc4;
+  display: inline-block;
+}
+
+#priceBox {
+  display: inline-block;
+}
+
+#addToCart {
+  display: inline-block;
+  background-color: #e45454;
+  padding: 3px;
+  margin: 3px;
+}
+
+.footerRow {
+  align: center;
+  display: inline-block;
+}
+
+.albumViewContainer {
+  text-align: left;
 }
 

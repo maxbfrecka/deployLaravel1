@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <!-- config -->
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- title -->
+    <title>Big Poppin</title>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- Fonts -->
@@ -14,6 +14,30 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+        html, body {
+            background-color: #fff;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 200;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .links > a {
+            color: #636b6f;
+            padding: 0 25px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center
+        }
+    </style>
+
+
 </head>
 
 
@@ -24,7 +48,9 @@
 
 
 <body>
-    <div id="app">
+    <div id="app" class="mainPageOuterContainer">
+        <div class="mainPageInnerContainer">
+
 
 
 
@@ -33,7 +59,7 @@
 
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" id="navbarTitleFont" href="{{ url('/') }}">
                     Big Poppin
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -51,11 +77,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a id="navbarFont" class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a id="navbarFont" class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -87,7 +113,7 @@
 
         <!-- body -->
 
-        <main class="py-4">
+        <main class="py-0">
 
             @yield('content')
         
@@ -95,6 +121,24 @@
 
 
 
+
+        <div class="footerRow row pt-3 pb-3 pl-3 pr-3">
+
+            <div class="col-12">
+                <div class="links">
+                    <a href="{{ url('/music') }}">Music</a>
+                    <a href="https://laracasts.com">Laracasts</a>
+                    <a href="https://laravel-news.com">News</a>
+                    <a href="https://blog.laravel.com">Blog</a>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        </div>
     </div>
 </body>
 </html>
