@@ -11100,7 +11100,7 @@ a.text-dark:focus {
   }
 }
 
-#header1 {
-  color: red;
+.albumContainer {
+  background-color: yellow;
 }
 

@@ -12,8 +12,21 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
+
+
+Route::get('/music', function () {
+    return view('music');
+})->middleware('IPcheck');
+
+
+Route::get('/albumview', function () {
+    return view('albumview');
+});
+
+
+
 
 Auth::routes();
 
