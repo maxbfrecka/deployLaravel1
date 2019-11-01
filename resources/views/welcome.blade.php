@@ -80,7 +80,7 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md" id="header1" >
+                <div class="title m-b-md" id="header1" style="color:red">
                    Big Poppin
                 </div>
 
