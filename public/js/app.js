@@ -1967,6 +1967,42 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
@@ -1975,9 +2011,10 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       audio_wingnut: '/../audio/Wingnut.wav',
+      audio_iwanttobewithher: '/../audio/iwanttobewithher.mp3',
+      audio_somehow: '/../audio/somehow.mp3',
+      audio_savetheworld: '/../audio/savetheworld.wav',
       audio_guigui: '/../audio/guigui.mp3',
-      cover_wingnut: '/../img/currentworks.png',
-      cover_guigui: '/../img/bigpoppin.png',
       audio: true
     };
   },
@@ -38609,22 +38646,31 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container albumsContainer" }, [
-    _c("div", { staticClass: "albumsRow row pt-3 pb-3 pl-3 pr-3" }, [
+    _c("div", { staticClass: "albumsRow row pt-3 pb-5 pl-3 pr-3" }, [
       _vm._m(0),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "col-6 pt-4", attrs: { id: "albumsInfoColumn" } },
+        {
+          staticClass: "col-6 pt-4",
+          staticStyle: { "background-color": "pink" },
+          attrs: { id: "albumsInfoColumn" }
+        },
         [
           _c("div", { attrs: { id: "albumsInfoContainer" } }, [
             _vm._m(1),
+            _vm._v(" "),
+            _vm._m(2),
             _vm._v(" "),
             _c(
               "div",
               { attrs: { id: "albumsAudioContainer" } },
               [
                 _c("vue-audio", {
-                  attrs: { id: "vueAudioThing", file: _vm.audio_wingnut }
+                  attrs: {
+                    id: "vueAudioThing",
+                    file: _vm.audio_iwanttobewithher
+                  }
                 })
               ],
               1
@@ -38632,30 +38678,32 @@ var render = function() {
             _vm._v(" "),
             _c("br"),
             _vm._v(" "),
-            _vm._m(2)
+            _vm._m(3)
           ])
         ]
       ),
       _vm._v(" "),
-      _vm._m(3)
+      _vm._m(4)
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "albumsRow row pb-3 pl-3 pr-3" }, [
-      _vm._m(4),
+    _c("div", { staticClass: "albumsRow row pb-5 pl-3 pr-3" }, [
+      _vm._m(5),
       _vm._v(" "),
       _c(
         "div",
         { staticClass: "col-6 pt-4", attrs: { id: "albumsInfoColumn" } },
         [
           _c("div", { attrs: { id: "albumsInfoContainer" } }, [
-            _vm._m(5),
+            _vm._m(6),
+            _vm._v(" "),
+            _vm._m(7),
             _vm._v(" "),
             _c(
               "div",
               { attrs: { id: "albumsAudioContainer" } },
               [
                 _c("vue-audio", {
-                  attrs: { id: "vueAudioThing", file: _vm.audio_guigui }
+                  attrs: { id: "vueAudioThing", file: _vm.audio_savetheworld }
                 })
               ],
               1
@@ -38663,12 +38711,49 @@ var render = function() {
             _vm._v(" "),
             _c("br"),
             _vm._v(" "),
-            _vm._m(6)
+            _vm._m(8)
           ])
         ]
       ),
       _vm._v(" "),
-      _vm._m(7)
+      _vm._m(9)
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "albumsRow row pb-5 pl-3 pr-3" }, [
+      _vm._m(10),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "col-6 pt-4",
+          staticStyle: { "background-color": "rgb(120, 238, 120)" },
+          attrs: { id: "albumsInfoColumn" }
+        },
+        [
+          _c("div", { attrs: { id: "albumsInfoContainer" } }, [
+            _vm._m(11),
+            _vm._v(" "),
+            _vm._m(12),
+            _vm._v(" "),
+            _c(
+              "div",
+              { attrs: { id: "albumsAudioContainer" } },
+              [
+                _c("vue-audio", {
+                  attrs: { id: "vueAudioThing", file: _vm.audio_somehow }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _vm._m(13)
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _vm._m(14)
     ])
   ])
 }
@@ -38684,7 +38769,7 @@ var staticRenderFns = [
         _c("a", { attrs: { href: "music/wingnut" } }, [
           _c("img", {
             staticClass: "w-100",
-            attrs: { src: "/../img/currentworks.png" }
+            attrs: { src: "/../img/iwanttobewithher.png" }
           })
         ])
       ]
@@ -38696,8 +38781,79 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("h2", [
       _c("a", { attrs: { id: "albumTitle", href: "music/wingnut" } }, [
-        _vm._v("Wingnut")
+        _vm._v("I Want to Be With Her")
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h3", [
+      _c("span", [_vm._v("  [DM001]")]),
+      _vm._v(" "),
+      _c("span", [_vm._v("  (2019)")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { attrs: { id: "albumsBlurb" } }, [
+      _c("p", [
+        _vm._v("Full purchase contains 5 page PDF with supplemental material")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "priceColumn" }, [
+      _c("div", { attrs: { id: "priceBox" } }, [
+        _vm._v("\n                $2 Dollars\n            ")
+      ]),
+      _vm._v(" "),
+      _c("div", { attrs: { id: "addToCart" } }, [
+        _vm._v("\n                Add to Cart\n            ")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "col-3 p-4", attrs: { id: "albumArtColumn" } },
+      [
+        _c("a", { attrs: { href: "music/savetheworld" } }, [
+          _c("img", {
+            staticClass: "w-100",
+            attrs: { src: "/../img/savetheworld.jpg" }
+          })
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h2", [
+      _c("a", { attrs: { id: "albumTitle", href: "music/savetheworld" } }, [
+        _vm._v("Save the World")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h3", [
+      _c("span", [_vm._v("  [DM002]")]),
+      _vm._v(" "),
+      _c("span", [_vm._v("  (2019)")])
     ])
   },
   function() {
@@ -38707,7 +38863,7 @@ var staticRenderFns = [
     return _c("div", { attrs: { id: "albumsBlurb" } }, [
       _c("p", [
         _vm._v(
-          "New electronic drum beat - full version contains additional materials"
+          "The full version has a 3 page PDF with art, lyrics and intellectual rambling"
         )
       ])
     ])
@@ -38734,10 +38890,10 @@ var staticRenderFns = [
       "div",
       { staticClass: "col-3 p-4", attrs: { id: "albumArtColumn" } },
       [
-        _c("a", { attrs: { href: "music/guigui" } }, [
+        _c("a", { attrs: { href: "music/somehow" } }, [
           _c("img", {
             staticClass: "w-100",
-            attrs: { src: "/../img/bigpoppin.jpg" }
+            attrs: { src: "/../img/currentworks.png" }
           })
         ])
       ]
@@ -38749,7 +38905,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("h2", [
       _c("a", { attrs: { id: "albumTitle", href: "music/guigui" } }, [
-        _vm._v("Gui-Gui")
+        _vm._v("Somehow")
       ])
     ])
   },
@@ -38757,8 +38913,18 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("h3", [
+      _c("span", [_vm._v("  [DM003]")]),
+      _vm._v(" "),
+      _c("span", [_vm._v("  (2019)")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { attrs: { id: "albumsBlurb" } }, [
-      _c("p", [_vm._v("Houndlike body blow from a shoegaze pipe")])
+      _c("p", [_vm._v("Purchase contains additional materials")])
     ])
   },
   function() {

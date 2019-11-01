@@ -11124,13 +11124,15 @@ a.text-dark:focus {
 }
 
 .albumsContainer {
-  background-color: #ffffe2;
+  background-color: white;
   display: inline-block;
 }
 
 #albumTitle {
   color: black;
-  font-size: 35px;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -11167,11 +11169,11 @@ a.text-dark:focus {
 }
 
 #albumArtColumn {
-  background-color: #daec8a;
+  background-color: white;
 }
 
 #albumsInfoColumn {
-  background-color: #9191b3;
+  background-color: #ffe600;
   display: inline-block;
   text-align: left;
 }

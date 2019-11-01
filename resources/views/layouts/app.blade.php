@@ -60,6 +60,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" id="navbarTitleFont" href="{{ url('/') }}">
+                    <img class='pr-2' src='img/bigpoppinicon.png' height='77'>
                     Big Poppin
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -126,10 +127,10 @@
 
             <div class="col-12">
                 <div class="links">
-                    <a href="{{ url('/music') }}">Music</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
+                    <a href="{{ url('/') }}">Music</a>
+                    <a href="https://bigpoppin.bandcamp.com">Bandcamp</a>
+                    <a href="https://twitter.com">Twitter</a>
+                    <a href="https://blog.laravel.com">About</a>
                 </div>
             </div>
 
