@@ -1,11 +1,29 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
+@import 'imports/fonts';
 // Variables
-@import 'variables';
-
+@import 'imports/variables';
+//paages
+@import 'pages/-mainpage';
+@import 'pages/checkout';
+@import 'pages/cart';
+@import 'pages/navbar';
+// Components
+@import 'components/alerts';
+@import 'components/buttons';
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+//Tailwind 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+//internal SCSS
+
+#app{
+    //default font
+    font-family: $main-page-font
+}
 
 .mainPageOuterContainer{
     display:inline-block;
@@ -24,9 +42,8 @@
 }
 
 
-
-
 #navbarTitleFont{
+    font-family: 'McLaren', cursive;
     font-size:40px;
     font-weight:bold;
 }

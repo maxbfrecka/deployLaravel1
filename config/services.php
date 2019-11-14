@@ -17,7 +17,8 @@ return [
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
-        'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
+        //I don't think this is needed unless outside US
+        // 'endpoint' => env('MAILGUN_ENDPOINT'),
     ],
 
     'postmark' => [
@@ -30,4 +31,11 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    //need to update to live key on server in the ENV file! should be easy!
+    //idk what the model is doing here.
+    'stripe' => [
+        'model' => App\User::class,
+        'key'=>env('STRIPE_KEY'),
+        'secret' => env('STRIPE_SECRET'),
+    ],
 ];

@@ -3,44 +3,77 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+import Vue from 'vue'
+import App from './App.vue'
 
 require('./bootstrap');
-import VueAudio from 'vue-audio';
+import VueRouter from 'vue-router'
+import VueAudio from 'vue-audio'
+import Routes from './routes'
+import VueCsrf from 'vue-csrf'
+import {store} from './store/store'
+import VueSession from 'vue-session'
 
+//session capabilities
+Vue.use(VueSession)
+//fixes csrf tokens
+Vue.use(VueCsrf);
+//routing capabilities
+Vue.use(VueRouter)
 window.Vue = require('vue');
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
 
+// const cart = {props:['cart']}
+
+//register the view router
+const router = new VueRouter({
+    routes:Routes,
+    //mode sets so that the /#/ is removed from URL
+    //that means the server needs to be configured so that / and anything AFTER / always returns index.html no matter what
+    //the # is used to prevent requests to server
+    mode:'history'
+});
+
+//automatically registers components for us
 const files = require.context('./', true, /\.vue$/i)
 files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
 
 const app = new Vue({
-    el: '#app',
-    data:{ 
-        testmessage: 'testdata1',
-        audiofile1: 'audio/Wingnut.wav',
-        audio: true,
+    el: '#vue-app',
+    router:router,
+    //this is essential. it holds the store from above from VUEX
+    store,
+    // render: h => h(App),
+    data:{
     },
+    props: [],
     components: {
-        'vue-audio': VueAudio
+        'vue-audio': VueAudio,
+        'vue-router': VueRouter,
+    },
+    watch: { 
     },
     methods: {
-        playAudio(){
-            console.log('Vue thang test');
+        //grabs the cart on BOOT on app
+        getCart(){
+          fetch('api/cart')
+              .then(res=>res.json())
+              .then(res=>{
+                  this.$store.state.cart = res.data
+              })
+        },
+        getCartFromSession(){
+          if(this.$session.get('cart')){
+            console.log('getting cart from session cuz yeah')
+            this.$store.state.cart=this.$session.get('cart')}
         },
     },
+    created: function(){
+        //this.$session.start()
+    },
+    mounted: function(){
+      this.getCartFromSession()
+      console.log(this.$store.state.cart)
+    }
 });

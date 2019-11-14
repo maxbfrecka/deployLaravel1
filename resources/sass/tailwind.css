@@ -1,0 +1,10 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+.h1 {
+    @apply px-4 py-2 rounded font-semibold bg-gray-200 text-black;
+  }

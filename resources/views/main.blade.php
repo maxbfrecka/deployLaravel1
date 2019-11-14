@@ -65,8 +65,10 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+            <h3 class="cartNav">Cart </h3>
             @if (Route::has('login'))
                 <div class="top-right links">
+
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
